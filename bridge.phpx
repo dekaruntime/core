@@ -10,6 +10,20 @@ export function bridge($kind, $action, $payload = {}) {
     return \__deka_wasm_call('__deka_' . ('' . $kind), '' . $action, $payload)
 }
 
+/// docid: phpx/core/bridge_async()
+/// <Function name="bridge_async">
+///   <Description>PHPX standard module function `bridge_async` from `core`.</Description>
+///   <Parameter name="$kind" type="mixed" required="true" typeLink="/docs/php/types/mixed">
+///     Parameter $kind.
+///   </Parameter>
+///   <Parameter name="$action" type="mixed" required="true" typeLink="/docs/php/types/mixed">
+///     Parameter $action.
+///   </Parameter>
+///   <Parameter name="$payload" type="mixed" required="false" typeLink="/docs/php/types/mixed">
+///     Parameter $payload.
+///   </Parameter>
+///   <ReturnType type="mixed" typeLink="/docs/php/types/mixed" />
+/// </Function>
 export function bridge_async($kind, $action, $payload = {}) {
     if (function_exists('__bridge_async')) {
         return \__bridge_async($kind, $action, $payload)
